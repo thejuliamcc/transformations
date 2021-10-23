@@ -1,0 +1,66 @@
+/* TRANSFORMATIONS */
+
+/* BASE STYLES
+------------------------------------- */
+body {
+    margin: 0;
+    padding: 25em;
+    background-color: chocolate;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier Prime', monospace;
+    filter: grayscale(50%);
+/* I tried a few mix modes (saturation, and screen) but didn't like how that made my colour choices moot */
+
+/* The next line isn't appearing */
+background-image: "images/paper.texture.jpg";
+}
+
+/* this section effects the gallery page */
+img {
+    max-width: 100%;
+    position:relative;
+    left: 30px;
+    border: 3px solid aqua;
+    z-index: -1;
+}
+
+/* NAVIGATION
+------------------------------------- */
+nav {
+    /* tried to rotate this -45deg but it became unclickable */
+}
+
+nav a {
+color: aqua;
+}
+
+nav a:hover {
+    cursor: wait;
+}
+
+/* HOME PAGE
+------------------------------------- */
+main {
+    line-height: 15px;  
+    transform: rotate(45deg);
+/* I had thrown in filter: blur a few ways but, of course, nothing could be read so I decided against it */
+}
+
+/* GALLERY PAGE
+------------------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
+    max-width: 25em;
+    margin: 5em auto;
+}
+
+.gallery-item {
+    padding: 0.5em;
+    border: 1px solid aqua;
+    display: grid;
+    align-items: end;
+    overflow: scroll;
+}
